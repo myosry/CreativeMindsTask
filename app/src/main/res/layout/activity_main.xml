@@ -9,7 +9,7 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="120dp">
+        android:layout_height="match_parent">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -68,6 +68,8 @@
     </android.support.design.widget.AppBarLayout>
 
         <LinearLayout
+            android:elevation="10dp"
+            android:orientation="vertical"
             android:layout_marginTop="60dp"
             android:layout_marginEnd="@dimen/activity_vertical_margin"
             android:layout_marginStart="@dimen/activity_vertical_margin"
@@ -88,7 +90,13 @@
                 />
 
         </LinearLayout>
+        <android.support.v4.view.ViewPager
+            android:layout_marginTop="120dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewPager">
 
+        </android.support.v4.view.ViewPager>
     </FrameLayout>
 
     <include layout="@layout/content_main" />

@@ -24,18 +24,19 @@ public class FragmentAdapterDemo extends FragmentPagerAdapter implements IFTabAd
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
-            return FragmentWating.newInstance();
+            return FragmentCancelled.newInstance();
         } else if (position == 1) {
             return FragmentAccepted.newInstance();
         } else  {
-            return FragmentCancelled.newInstance();
+            return FragmentWating.newInstance();
+
         }
 
     }
 
     @Override
     public int getCount() {
-        return 4;
+        return 3;
     }
 
     String wating_title = WATING;
@@ -46,16 +47,16 @@ public class FragmentAdapterDemo extends FragmentPagerAdapter implements IFTabAd
     @Override
     public String getTitle(int position) {
         if (position == 0) {
-            return wating_title;
+            return cancelled_title;
         }
         if (position == 1) {
             return accpted_title;
         }
         if (position == 2) {
-            return cancelled_title;
+            return wating_title;
         }
 
-        return default_tab + position;
+        return wating_title ;
     }
 
     @Override
